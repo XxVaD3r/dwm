@@ -4,12 +4,20 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/dmitrys/Dev/Suckless/dwm/	//
+!_TAG_PROC_CWD	/home/dmitrys/.suckless/dwm/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20211212.0/
 ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
+-1063,7 +1087,7	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -1063,7 +1087,7 @@ manage(Window w, XWindowAttributes *wa)$/;"	h	modifiedFile:b/dwm.c
+-1193,6 +1217,16	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -1193,6 +1217,16 @@ movemouse(const Arg *arg)$/;"	h	modifiedFile:b/dwm.c
+-1418,7 +1452,7	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -1418,7 +1452,7 @@ sendmon(Client *c, Monitor *m)$/;"	h	modifiedFile:b/dwm.c
+-147,6 +148,7	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -147,6 +148,7 @@ static int applysizehints(Client *c, int$/;"	h	modifiedFile:b/dwm.c
+-184,6 +186,7	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -184,6 +186,7 @@ static void maprequest(XEvent *e);$/;"	h	modifiedFile:b/dwm.c
+-1901,6 +1935,7	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -1901,6 +1935,7 @@ updategeom(void)$/;"	h	modifiedFile:b/dwm.c
+-406,6 +409,27	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -406,6 +409,27 @@ attach(Client *c)$/;"	h	modifiedFile:b/dwm.c
+-49,7 +49,8	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^@@ -49,7 +49,8 @@$/;"	h	modifiedFile:b/dwm.c
 .c.o	Makefile	/^.c.o:$/;"	t
 Arg	dwm.c	/^} Arg;$/;"	t	typeref:union:__anon0f53a99e060a	file:
 BETWEEN	util.h	/^#define BETWEEN(/;"	d
@@ -51,6 +59,7 @@ INCS	config.mk	/^INCS = -I${X11INC} -I${FREETYPEINC}$/;"	m
 INTERSECT	dwm.c	/^#define INTERSECT(/;"	d	file:
 ISSUES	dwm.1	/^.SH ISSUES$/;"	s	title:DWM
 ISVISIBLE	dwm.c	/^#define ISVISIBLE(/;"	d	file:
+ISVISIBLEONTAG	dwm.c	/^#define ISVISIBLEONTAG(/;"	d	file:
 Key	dwm.c	/^} Key;$/;"	t	typeref:struct:__anon0f53a99e0808	file:
 LDFLAGS	config.mk	/^LDFLAGS  = ${LIBS}$/;"	m
 LENGTH	dwm.c	/^#define LENGTH(/;"	d	file:
@@ -125,7 +134,9 @@ arrange	dwm.c	/^	void (*arrange)(Monitor *);$/;"	m	struct:__anon0f53a99e0908	typ
 arrange	dwm.c	/^arrange(Monitor *m)$/;"	f	typeref:typename:void
 arrangemon	dwm.c	/^arrangemon(Monitor *m)$/;"	f	typeref:typename:void
 attach	dwm.c	/^attach(Client *c)$/;"	f	typeref:typename:void
+attachBelow	dwm.c	/^attachBelow(Client *c)$/;"	f	typeref:typename:void
 attachstack	dwm.c	/^attachstack(Client *c)$/;"	f	typeref:typename:void
+b/dwm.c	Patches/dwm-attachasideandbelow-20200702-f04cac6.diff	/^--- b\/dwm.c	2020-07-05 16:05:02.555947738 -0300$/;"	m
 barwin	dwm.c	/^	Window barwin;$/;"	m	struct:Monitor	typeref:typename:Window	file:
 baseh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
 basew	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
@@ -176,7 +187,7 @@ dist	Makefile	/^dist: clean$/;"	t
 dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray/;"	v	typeref:typename:const char * []
 dmenucmd	config.h	/^static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray/;"	v	typeref:typename:const char * []
 dmenufont	config.def.h	/^static const char dmenufont[]       = "monospace:size=10";$/;"	v	typeref:typename:const char[]
-dmenufont	config.h	/^static const char dmenufont[]       = "dejavu sans:size=10";$/;"	v	typeref:typename:const char[]
+dmenufont	config.h	/^static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10:style=SemiBold:autohint=t/;"	v	typeref:typename:const char[]
 dmenumon	config.def.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
 dmenumon	config.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
 dpy	drw.h	/^	Display *dpy;$/;"	m	struct:Fnt	typeref:typename:Display *
@@ -212,7 +223,7 @@ focusin	dwm.c	/^focusin(XEvent *e)$/;"	f	typeref:typename:void
 focusmon	dwm.c	/^focusmon(const Arg *arg)$/;"	f	typeref:typename:void
 focusstack	dwm.c	/^focusstack(const Arg *arg)$/;"	f	typeref:typename:void
 fonts	config.def.h	/^static const char *fonts[]          = { "monospace:size=10" };$/;"	v	typeref:typename:const char * []
-fonts	config.h	/^static const char *fonts[]          = { "dejavu sans:size=10" };$/;"	v	typeref:typename:const char * []
+fonts	config.h	/^static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10:style=SemiBold:autohint/;"	v	typeref:typename:const char * []
 fonts	drw.h	/^	Fnt *fonts;$/;"	m	struct:__anon0f5116480308	typeref:typename:Fnt *
 func	dwm.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0f53a99e0808	typeref:typename:void (*)(const Arg *)	file:
 func	dwm.c	/^	void (*func)(const Arg *arg);$/;"	m	struct:__anon0f53a99e0708	typeref:typename:void (*)(const Arg * arg)	file:
@@ -284,6 +295,7 @@ neverfocus	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isf
 next	drw.h	/^	struct Fnt *next;$/;"	m	struct:Fnt	typeref:struct:Fnt *
 next	dwm.c	/^	Client *next;$/;"	m	struct:Client	typeref:typename:Client *	file:
 next	dwm.c	/^	Monitor *next;$/;"	m	struct:Monitor	typeref:typename:Monitor *	file:
+nexttagged	dwm.c	/^nexttagged(Client *c) {$/;"	f	typeref:typename:Client *
 nexttiled	dwm.c	/^nexttiled(Client *c)$/;"	f	typeref:typename:Client *
 nmaster	config.def.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
 nmaster	config.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
@@ -339,7 +351,7 @@ showbar	dwm.c	/^	int showbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
 showhide	dwm.c	/^showhide(Client *c)$/;"	f	typeref:typename:void
 sigchld	dwm.c	/^sigchld(int unused)$/;"	f	typeref:typename:void
 snap	config.def.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
-snap	config.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
+snap	config.h	/^static const unsigned int snap      = 16;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
 snext	dwm.c	/^	Client *snext;$/;"	m	struct:Client	typeref:typename:Client *	file:
 spawn	dwm.c	/^spawn(const Arg *arg)$/;"	f	typeref:typename:void
 stack	dwm.c	/^	Client *stack;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
